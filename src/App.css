@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Merriweather:wght@700&display=swap');
+
+
 .App{
   margin: 0 auto;
 }
@@ -5,8 +8,14 @@
   margin: 0 auto;
   background: linear-gradient(to top, red, pink);
   width: 200px;
-  height: 240px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.city{
+  font-family: 'Merriweather', serif;
 }
