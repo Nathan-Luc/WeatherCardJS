@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import WeatherCard from './WeatherCard';
+import WeatherCard from './Components/WeatherCard/component';
 
 function App() {
   return (
