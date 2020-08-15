@@ -3,12 +3,36 @@ import styled from '@emotion/styled';
 
 import Location from './location' 
 import Condition from './condition'
+import Icon from './icon'
 
 const WeatherCard = (props) => {
-    const red = 60;
+    let highColor = 0
+    let lowColor = 0
+    let bg = null;
+    if(props.temp > 12)
+   {
+     highColor = (1-((props.temp-12)/28))*255;
+     lowColor = highColor - 150;
+     bg = `linear-gradient(
+        to top,
+        rgb(255,${highColor},0), 
+        rgb(255,${lowColor},0)
+        );`
+   }
+   else if (props.temp <= 12)
+   {
+     highColor = (1-((props.temp+20)/32))*255;
+     lowColor = highColor - 150;
+     bg = `linear-gradient(
+        to top,
+        rgb(0,${highColor},255), 
+        rgb(0,${lowColor},255)
+        );`
+   }
+    
     const Card = styled.div` 
         margin: 0 auto;
-        background: linear-gradient(to top, rgba(${red},255,255), lightblue);
+        background: ${bg};
         width: 200px;
         height: 300px;
         display: flex;
@@ -18,9 +42,10 @@ const WeatherCard = (props) => {
         border-radius: 15px;
     `
     return ( 
+        
         <Card className = "card">
             <Location/>
-            <img classname = 'icon' src="./Mcloud.png" alt="Weather Icon"/>
+            <Icon/>
             <Condition/>
         </Card>
      );
