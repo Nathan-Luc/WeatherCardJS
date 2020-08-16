@@ -49,6 +49,7 @@ const WeatherCard = (props) => {
             <Condition/>
         </Card>
      );
+     //add comment
 }
  
 export default WeatherCard; 
