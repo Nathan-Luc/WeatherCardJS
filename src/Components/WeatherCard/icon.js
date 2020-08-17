@@ -8,7 +8,7 @@ const Icons = (props) => {
     `
 
     return ( 
-        <Icon classname = 'icon' src="./Mcloud.png" alt="Weather Icon"/>
+        <Icon classname = 'icon' src="./Icons/Blizzard Night-2x.png" alt="Weather Icon"/>
      );
 }
  
